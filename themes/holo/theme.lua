@@ -5,47 +5,13 @@
                                 
 --]]
 
-local awful = require("awful")
-awful.util = require("awful.util")
+theme                               = {}
 
---{{{ Main
-theme = {}
+theme.icon_dir                      = os.getenv("HOME") .. "/.config/awesome/themes/holo/icons"
 
-home          = os.getenv("HOME")
-config        = awful.util.getdir("config")
-shared        = "/usr/share/awesome"
-if not awful.util.file_readable(shared .. "/icons/awesome16.png") then
-    shared    = "/usr/share/local/awesome"
-end
-sharedicons   = shared .. "/icons"
-sharedthemes  = shared .. "/themes"
-themes        = config .. "/themes"
-themename     = "/holo"
-if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
-       themes = sharedthemes
-end
-themedir      = themes .. themename
-theme.icon_dir = themedir .. "/icons"
-theme.topbar_path = "png:" .. theme.icon_dir .. "/topbar/"
+theme.wallpaper                     = os.getenv("HOME") .. "/.config/awesome/themes/holo/wall.png"
 
-wallpaper1    = themedir .. "/wall.png"
-wallpaper2    = themedir .. "/background.png"
-wallpaper3    = sharedthemes .. "/zenburn/zenburn-background.png"
-wallpaper4    = sharedthemes .. "/default/background.png"
-wpscript      = home .. "/.wallpaper"
-
-if awful.util.file_readable(wallpaper1) then
-  theme.wallpaper = wallpaper1
-elseif awful.util.file_readable(wallpaper2) then
-  theme.wallpaper = wallpaper2
-elseif awful.util.file_readable(wpscript) then
-  theme.wallpaper_cmd = { "sh " .. wpscript }
-elseif awful.util.file_readable(wallpaper3) then
-  theme.wallpaper = wallpaper3
-else
-  theme.wallpaper = wallpaper4
-end
---}}}
+theme.topbar_path                   = "png:" .. theme.icon_dir .. "/topbar/"
 
 theme.font                          = "Tamsyn 10.5"
 theme.taglist_font                  = "Tamsyn 8"
@@ -71,7 +37,7 @@ theme.menu_width                    = "400"
 theme.widget_bg                     = theme.icon_dir .. "/bg_focus_noline.png"
 theme.awesome_icon                  = theme.icon_dir .. "/awesome_icon.png"
 theme.vol_bg                        = theme.icon_dir .. "/vol_bg.png"
-theme.menu_submenu_icon             = theme.icon_dir .. "/submenu.png"
+theme.submenu_icon                  = theme.icon_dir .. "/submenu.png"
 theme.taglist_squares_sel           = theme.icon_dir .. "/square_sel.png"
 theme.taglist_squares_unsel         = theme.icon_dir .. "/square_unsel.png"
 theme.last                          = theme.icon_dir .. "/last.png"

@@ -59,6 +59,7 @@ local sexec  = awful.util.spawn_with_shell
 
 -- Beautiful theme
 beautiful.init(awful.util.getdir("config") .. "/themes/zhongguo/zhongguo.lua")
+-- beautiful.init(awful.util.getdir("config") .. "/themes/blackburn/theme.lua")
 
 -- Window management layouts
 layouts = {
