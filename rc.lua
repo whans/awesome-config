@@ -42,7 +42,7 @@ memtext_format = " $1%" -- %1 percentage, %2 used %3 total %4 free
 
 date_format = "%a %m/%d/%Y %l:%M%p" -- refer to http://en.wikipedia.org/wiki/Date_(Unix) specifiers
 
-networks = {'eth0'} -- add your devices network interface here netwidget, only shows first one thats up.
+networks = {'wlan0'} -- add your devices network interface here netwidget, only shows first one thats up.
 
 require_safe('personal')
 
