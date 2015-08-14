@@ -14,6 +14,8 @@ require("awful")
 require("awful.rules")
 require("awful.autofocus")
 require("naughty")
+-- Load Debian menu entries
+require("debian.menu")
 -- User libraries
 require("vicious") -- ./vicious
 require("helpers") -- helpers.lua
@@ -85,7 +87,7 @@ taglist_numbers_sets = {
 	persian_arabic={'٠', '١', '٢', '٣', '۴', '۵', '۶', '٧', '٨', '٩'},
 	roman={'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'},
 	thai={'๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙', '๑๐'},
-	whans={"doc", "code", "web", "music"},
+	whans={"doc", "term", "code", "web", "music"},
 }
 -- }}}
 
@@ -104,7 +106,6 @@ for s = 1, screen.count() do
     --tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
 -- }}}
-
 
 -- {{{ Wibox
 --
